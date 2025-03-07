@@ -1,7 +1,3 @@
--- You can add your own plugins here or in other files in this directory!
---  I promise not to create any merge conflicts in this directory :)
---
--- See the kickstart.nvim README for more information
 function _G.set_terminal_keymaps()
   local opts = { buffer = 0 }
   vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], opts)
@@ -52,4 +48,5 @@ return {
     vim.keymap.set('n', '<Space>t', ':ToggleTerm<CR>', { noremap = true, silent = true }),
     vim.cmd 'autocmd! TermOpen term://* lua set_terminal_keymaps()',
   },
+  { vim.keymap.set('n', '<Space>n', ':Neotree toggle<CR>', { noremap = true, silent = true }) },
 }
